@@ -91,6 +91,7 @@
                                             <label>Car Status <span style="color:#fe7c96;">*</span></label><br>
                                             <input type="radio" name="car_status" id="car_status_1" value="1" checked> Active
                                             <input type="radio" name="car_status" id="car_status_0" value="0"> Inactive
+                                            <?= form_error('car_status');?>
                                         </div>
                                         <br/>
                                         <div class="form-group col-md-6">
@@ -141,14 +142,21 @@
                 car_year: {
                     required: true,
                     pattern: /^[0-9]*$/,
+                },
+                car_status: {
+                    required: true
                 }                
             },
             messages: {
-                car_name: {required: 'Car Name is required'},
-                car_color: {required: 'Car Color is required'},
+                car_name: {required: 'Car Name is required',pattern: 'Only Alphabetic Characters allowed'},
+                car_color: {required: 'Car Color is required',pattern: 'Only Alphabetic Characters allowed'},
                 car_fuel: {required: 'Car Fuel is required'},
-                car_name: {required: 'Car Name is required'},
-                car_description: {required: 'Car Description is required',minlength: 'Description must be contain 10 characters'}
+                car_description: {required: 'Car Description is required',minlength: 'Description must be contain 10 characters'},
+                car_image: {required: 'Car Image is required',extention: 'Only jpg,png,jpeg allowed'},
+                car_date: {required: 'Car Date is required',pattern: 'Numbers only'},
+                car_month: {required: 'Car Month is required',pattern: 'Numbers only'},
+                car_year: {required: 'Car Year is required',pattern: 'Numbers only'},
+                car_status: {required: 'Car Status is required'}
             },
             submitHandler: function(form) { 
                 $.ajax({

@@ -127,9 +127,9 @@
                     required: true,
                     minlength: 10
                 },
-                car_image: {
+                userfile: {
                     required: true,
-                    extension: "jpg|jpeg|png|"
+                    extension: "jpg|jpeg|png|gif"
                 },
                 car_date: {
                     required: true,
@@ -152,7 +152,7 @@
                 car_color: {required: 'Car Color is required',pattern: 'Only Alphabetic Characters allowed'},
                 car_fuel: {required: 'Car Fuel is required'},
                 car_description: {required: 'Car Description is required',minlength: 'Description must be contain 10 characters'},
-                car_image: {required: 'Car Image is required',extension: 'Only jpg,png,jpeg allowed'},
+                userfile: {required: 'Car Image is required',extension: 'Only jpg,png,jpeg allowed'},
                 car_date: {required: 'Car Date is required',pattern: 'Numbers only'},
                 car_month: {required: 'Car Month is required',pattern: 'Numbers only'},
                 car_year: {required: 'Car Year is required',pattern: 'Numbers only'},
